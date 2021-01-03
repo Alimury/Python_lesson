@@ -4,7 +4,6 @@ from fixture.group import GroupHelper
 from fixture.contact import ContactHelper
 
 
-
 class Application:
     def __init__(self):
         self.wd = webdriver.Firefox()
