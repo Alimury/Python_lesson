@@ -18,6 +18,17 @@ class GroupHelper:
         wd.find_element_by_name("submit").click()
         self.return_to_groups_page()
 
+    def test_edit(self, group):
+        wd = self.app.wd
+        self.open_group_page()
+        self.select_first_group()
+        # Нажимаем "Изменить"
+        wd.find_element_by_name("edit").click()
+        self.fill_group_form(group)
+        # Сохраняем изменения
+        wd.find_element_by_name("update").click()
+        self.return_to_groups_page()
+
     def fill_group_form(self, group):
         self.change_field_value("group_name", group.name)
         self.change_field_value("group_header", group.header)
@@ -29,17 +40,6 @@ class GroupHelper:
             wd.find_element_by_name(field_name).click()
             wd.find_element_by_name(field_name).clear()
             wd.find_element_by_name(field_name).send_keys(text)
-
-    def test_edit(self, group):
-        wd = self.app.wd
-        self.open_group_page()
-        self.select_first_group()
-        # Нажимаем "Изменить"
-        wd.find_element_by_name("edit").click()
-        self.fill_group_form(group)
-        # Сохраняем изменения
-        wd.find_element_by_name("update").click()
-        self.return_to_groups_page()
 
 
     def delete_first_group(self):
