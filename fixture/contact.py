@@ -6,7 +6,8 @@ class ContactHelper:
 
     def open_new_page(self):
         wd = self.app.wd
-        wd.find_element_by_link_text("add new").click()
+        if not (len(wd.find_elements_by_name("Number of results: ")) > 0):
+            wd.find_element_by_link_text("add new").click()
 
     def open_edit_page(self):
         wd = self.app.wd
