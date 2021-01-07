@@ -1,0 +1,68 @@
+Testing started at 18:21 ...
+C:\Users\Admin\PycharmProjects\Python_lesson\env\Scripts\python.exe "C:\Program Files\JetBrains\PyCharm Community Edition 2019.2\helpers\pycharm\_jb_pytest_runner.py" --path C:/Users/Admin/PycharmProjects/Python_lesson/test/test_cont_add.py
+Launching pytest with arguments C:/Users/Admin/PycharmProjects/Python_lesson/test/test_cont_add.py in C:\Users\Admin\PycharmProjects\Python_lesson\test
+
+============================= test session starts =============================
+platform win32 -- Python 3.6.4, pytest-6.1.2, py-1.9.0, pluggy-0.13.1 -- C:\Users\Admin\PycharmProjects\Python_lesson\env\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\Admin\PycharmProjects\Python_lesson\test
+collecting ... collected 1 item
+
+test_cont_add.py::test_add_new FAILED                                    [100%]
+test_cont_add.py:4 (test_add_new)
+[None:Petr:Petrov] != [63:Petr Petrov:Petr Petrov]
+
+Expected :[63:Petr Petrov:Petr Petrov]
+Actual   :[None:Petr:Petrov]
+<Click to see difference>
+
+app = <fixture.application.Application object at 0x00000169747DE518>
+
+    def test_add_new(app):
+        old_contact = app.contact.get_contact_list()
+        cont = Add_New(firstname="Petrov", lastname="Petr")
+        app.contact.create_new(cont)
+        new_contact = app.contact.get_contact_list()
+        assert len(old_contact) + 1 == len(new_contact)
+        old_contact.append(cont)
+        def id_or_max(ct):
+            if ct.id:
+                return int(ct.id)
+            else:
+                return maxsize
+>       assert sorted(old_contact, key=id_or_max) == sorted(new_contact, key=id_or_max)
+E       assert [None:Petr:Petrov] == [63:Petr Petrov:Petr Petrov]
+
+test_cont_add.py:17: AssertionError
+
+
+================================== FAILURES ===================================
+________________________________ test_add_new _________________________________
+
+app = <fixture.application.Application object at 0x00000169747DE518>
+
+    def test_add_new(app):
+        old_contact = app.contact.get_contact_list()
+        cont = Add_New(firstname="Petrov", lastname="Petr")
+        app.contact.create_new(cont)
+        new_contact = app.contact.get_contact_list()
+        assert len(old_contact) + 1 == len(new_contact)
+        old_contact.append(cont)
+        def id_or_max(ct):
+            if ct.id:
+                return int(ct.id)
+            else:
+                return maxsize
+>       assert sorted(old_contact, key=id_or_max) == sorted(new_contact, key=id_or_max)
+E       assert [None:Petr:Petrov] == [63:Petr Petrov:Petr Petrov]
+
+test_cont_add.py:17: AssertionError
+=========================== short test summary info ===========================
+FAILED test_cont_add.py::test_add_new - assert [None:Petr:Petrov] == [63:Petr...
+============================= 1 failed in 18.44s ==============================
+
+Process finished with exit code 0
+
+Assertion failed
+
+Assertion failed
