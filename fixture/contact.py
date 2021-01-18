@@ -25,8 +25,12 @@ class ContactHelper:
         self.return_home_page()
         self.cont_cache = None
 
-    def test_edit_add(self, new):
+    def test_edit_add(self):
+        self.modify_contact_by_index(0)
+
+    def modify_contact_by_index(self, new, index):
         wd = self.app.wd
+        self.select_contact_by_index(index)
         self.open_edit_page()
         # Изменить данные
         self.fill_new_firms(new)
@@ -50,20 +54,28 @@ class ContactHelper:
             wd.find_element_by_name(field_name).clear()
             wd.find_element_by_name(field_name).send_keys(text)
 
-
     def test_delete_first_new(self):
+        self.delete_contact_by_index(0)
+
+    def delete_contact_by_index(self, index):
         wd = self.app.wd
         # Выбрать первый контакт
-        wd.find_element_by_name("selected[]").click()
+        self.select_contact_by_index(index)
         # Удалить контакт
         wd.find_element_by_xpath("//input[@value='Delete']").click()
         wd.switch_to_alert().accept()
         self.return_home_page()
         self.cont_cache = None
 
+    def select_contact_by_index(self, index):
+        wd = self.app.wd
+        wd.find_elements_by_name("selected[]")[index].click()
+
+
     def return_home_page(self):
         wd = self.app.wd
-        wd.find_element_by_link_text("home").click()
+        if not (len(wd.find_elements_by_name("Number of results: ")) > 0):
+            wd.find_element_by_link_text("home").click()
 
     def count(self):
         wd = self.app.wd
