@@ -1,0 +1,66 @@
+Testing started at 11:35 ...
+C:\Users\Admin\PycharmProjects\Python_lesson\env\Scripts\python.exe "C:\Program Files\JetBrains\PyCharm Community Edition 2019.2\helpers\pycharm\_jb_pytest_runner.py" --path C:/Users/Admin/PycharmProjects/Python_lesson/test/test_cont_edit.py
+Launching pytest with arguments C:/Users/Admin/PycharmProjects/Python_lesson/test/test_cont_edit.py in C:\Users\Admin\PycharmProjects\Python_lesson\test
+
+============================= test session starts =============================
+platform win32 -- Python 3.6.4, pytest-6.1.2, py-1.9.0, pluggy-0.13.1 -- C:\Users\Admin\PycharmProjects\Python_lesson\env\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\Admin\PycharmProjects\Python_lesson\test
+collecting ... collected 1 item
+
+test_cont_edit.py::test_cont_edit FAILED                                 [100%]
+test_cont_edit.py:5 (test_cont_edit)
+[92:Semen:Sidorov, 93:Petr:Petrov, 94:asdasd:asdasd, 95:asdasqwe:qweqasd] != [92:Petr:Petrov, 93:Petr:Petrov, 94:Semen:Sidorov, 95:asdasqwe:qweqasd]
+
+Expected :[92:Petr:Petrov, 93:Petr:Petrov, 94:Semen:Sidorov, 95:asdasqwe:qweqasd]
+Actual   :[92:Semen:Sidorov, 93:Petr:Petrov, 94:asdasd:asdasd, 95:asdasqwe:qweqasd]
+<Click to see difference>
+
+app = <fixture.application.Application object at 0x000001F35A730630>
+
+    def test_cont_edit(app):
+        if app.contact.count() == 0:
+            app.contact.create_new(Add_New(firstname="Petr", lastname="Petrov"))
+        old_contact = app.contact.get_contact_list()
+        index = randrange(len(old_contact))
+        cont = Add_New(firstname="Semen", lastname="Sidorov")
+        cont.id = old_contact[index].id
+        app.contact.modify_contact_by_index(cont, index)
+        assert len(old_contact) == app.contact.count()
+        new_contact = app.contact.get_contact_list()
+        old_contact[index] = cont
+>       assert sorted(old_contact, key=Add_New.id_or_max) == sorted(new_contact, key=Add_New.id_or_max)
+E       assert [92:Semen:Sidorov, 93:Petr:Petrov, 94:asdasd:asdasd, 95:asdasqwe:qweqasd] == [92:Petr:Petrov, 93:Petr:Petrov, 94:Semen:Sidorov, 95:asdasqwe:qweqasd]
+
+test_cont_edit.py:17: AssertionError
+
+
+================================== FAILURES ===================================
+_______________________________ test_cont_edit ________________________________
+
+app = <fixture.application.Application object at 0x000001F35A730630>
+
+    def test_cont_edit(app):
+        if app.contact.count() == 0:
+            app.contact.create_new(Add_New(firstname="Petr", lastname="Petrov"))
+        old_contact = app.contact.get_contact_list()
+        index = randrange(len(old_contact))
+        cont = Add_New(firstname="Semen", lastname="Sidorov")
+        cont.id = old_contact[index].id
+        app.contact.modify_contact_by_index(cont, index)
+        assert len(old_contact) == app.contact.count()
+        new_contact = app.contact.get_contact_list()
+        old_contact[index] = cont
+>       assert sorted(old_contact, key=Add_New.id_or_max) == sorted(new_contact, key=Add_New.id_or_max)
+E       assert [92:Semen:Sidorov, 93:Petr:Petrov, 94:asdasd:asdasd, 95:asdasqwe:qweqasd] == [92:Petr:Petrov, 93:Petr:Petrov, 94:Semen:Sidorov, 95:asdasqwe:qweqasd]
+
+test_cont_edit.py:17: AssertionError
+=========================== short test summary info ===========================
+FAILED test_cont_edit.py::test_cont_edit - assert [92:Semen:Sidorov, 93:Petr:...
+============================= 1 failed in 33.61s ==============================
+
+Process finished with exit code 0
+
+Assertion failed
+
+Assertion failed
