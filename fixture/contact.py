@@ -15,6 +15,10 @@ class ContactHelper:
         wd = self.app.wd
         wd.find_element_by_xpath("//img[@alt='Edit']").click()
 
+    def open_edit_page_by_index(self, index):
+        wd = self.app.wd
+        wd.find_elements_by_xpath("//img[@alt='Edit']")[index].click()
+
     def create_new(self, new):
         wd = self.app.wd
         self.open_new_page()
@@ -30,8 +34,7 @@ class ContactHelper:
 
     def modify_contact_by_index(self, new, index):
         wd = self.app.wd
-        self.select_contact_by_index(index)
-        self.open_edit_page()
+        self.open_edit_page_by_index(index)
         # Изменить данные
         self.fill_new_firms(new)
         # Нажать на Update

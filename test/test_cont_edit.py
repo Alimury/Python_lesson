@@ -3,6 +3,7 @@ from model.add_new import Add_New
 from random import randrange
 
 
+
 def test_cont_edit(app):
     if app.contact.count() == 0:
         app.contact.create_new(Add_New(firstname="Petr", lastname="Petrov"))
