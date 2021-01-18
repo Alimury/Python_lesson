@@ -84,6 +84,7 @@ class ContactHelper:
 
     cont_cache = None
 
+
     def get_contact_list(self):
         if self.cont_cache is None:
             wd = self.app.wd
