@@ -3,12 +3,13 @@ from sys import maxsize
 
 class Add_New:
 
-    def __init__(self, firstname=None, lastname=None, address=None, telephone=None, email=None, id=None):
+    def __init__(self, firstname=None, lastname=None, homephone=None, mobilephone=None, workphone=None, secondaryphone=None, id=None):
         self.firstname = firstname
         self.lastname = lastname
-        self.address = address
-        self.telephone = telephone
-        self.email = email
+        self.homephone = homephone
+        self.mobilephone = mobilephone
+        self.workphone = workphone
+        self.secondaryphone = secondaryphone
         self.id = id
 
     def __repr__(self):
