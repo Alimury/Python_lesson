@@ -1,0 +1,54 @@
+Testing started at 18:42 ...
+C:\Users\Admin\PycharmProjects\Python_lesson\env\Scripts\python.exe "C:\Program Files\JetBrains\PyCharm Community Edition 2019.2\helpers\pycharm\_jb_pytest_runner.py" --path C:/Users/Admin/PycharmProjects/Python_lesson/test/test_cont_phones.py
+Launching pytest with arguments C:/Users/Admin/PycharmProjects/Python_lesson/test/test_cont_phones.py in C:\Users\Admin\PycharmProjects\Python_lesson\test
+
+============================= test session starts =============================
+platform win32 -- Python 3.6.4, pytest-6.1.2, py-1.9.0, pluggy-0.13.1 -- C:\Users\Admin\PycharmProjects\Python_lesson\env\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\Admin\PycharmProjects\Python_lesson\test
+collecting ... collected 1 item
+
+test_cont_phones.py::test_phones_on_home_page FAILED                     [100%]
+test_cont_phones.py:3 (test_phones_on_home_page)
+ 342345 != 342345
+
+Expected :342345
+Actual   : 342345
+<Click to see difference>
+
+app = <fixture.application.Application object at 0x000001B7ABFEEE48>
+
+    def test_phones_on_home_page(app):
+        cont_from_home_page = app.contact.get_contact_list()[0]
+        cont_from_edit_page = app.contact.get_contact_info_from_edit_page(0)
+        assert cont_from_edit_page.homephone == clear(cont_from_home_page.homephone)
+        assert cont_from_edit_page.mobilephone == clear(cont_from_home_page.mobilephone)
+>       assert cont_from_edit_page.workphone == clear(cont_from_home_page.workphone)
+E       AssertionError: assert ' 342345' == '342345'
+
+test_cont_phones.py:9: AssertionError
+
+
+================================== FAILURES ===================================
+__________________________ test_phones_on_home_page ___________________________
+
+app = <fixture.application.Application object at 0x000001B7ABFEEE48>
+
+    def test_phones_on_home_page(app):
+        cont_from_home_page = app.contact.get_contact_list()[0]
+        cont_from_edit_page = app.contact.get_contact_info_from_edit_page(0)
+        assert cont_from_edit_page.homephone == clear(cont_from_home_page.homephone)
+        assert cont_from_edit_page.mobilephone == clear(cont_from_home_page.mobilephone)
+>       assert cont_from_edit_page.workphone == clear(cont_from_home_page.workphone)
+E       AssertionError: assert ' 342345' == '342345'
+
+test_cont_phones.py:9: AssertionError
+=========================== short test summary info ===========================
+FAILED test_cont_phones.py::test_phones_on_home_page - AssertionError: assert...
+============================= 1 failed in 20.84s ==============================
+
+Process finished with exit code 0
+
+Assertion failed
+
+Assertion failed
