@@ -3,6 +3,7 @@ from sys import maxsize
 
 class Add_New:
 
+
     def __init__(self, firstname=None, lastname=None, address=None,
                  homephone=None, mobilephone=None, workphone=None, secondaryphone=None,
                  email=None, email2=None, email3=None, all_email_from_home_page=None,

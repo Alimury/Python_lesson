@@ -1,5 +1,6 @@
 import re
 
+
 def test_name_and_address_on_home_page(app):
     cont_from_home_page = app.contact.get_contact_list()[0]
     cont_from_edit_page = app.contact.get_contact_info_from_edit_page(0)

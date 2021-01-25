@@ -2,7 +2,6 @@ from model.add_new import Add_New
 from random import randrange
 
 
-
 def test_delete_some_new(app):
     if app.contact.count() == 0:
         app.contact.create_new(Add_New(firstname="Sidorov"))

@@ -103,6 +103,7 @@ class ContactHelper:
                                                all_phones_from_home_page=all_phones))
         return list(self.cont_cache)
 
+
     def open_contact_to_edit_by_index(self, index):
         wd = self.app.wd
         self.app.open_home_page()
