@@ -3,7 +3,6 @@ from sys import maxsize
 
 class Add_New:
 
-
     def __init__(self, firstname=None, lastname=None, address=None,
                  homephone=None, mobilephone=None, workphone=None, secondaryphone=None,
                  email=None, email2=None, email3=None, all_email_from_home_page=None,
@@ -22,9 +21,10 @@ class Add_New:
         self.all_phones_from_home_page = all_phones_from_home_page
         self.all_email_from_home_page = all_email_from_home_page
 
-
     def __repr__(self):
-        return "%s:%s:%s" % (self.id, self.firstname, self.lastname)
+        return "%s:%s:%s:%s:%s:%s:%s:%s:%s:%s:%s" % (self.id, self.firstname, self.lastname, self.address,
+                                                     self.email, self.email2, self.email3,
+                                                     self.homephone, self.mobilephone, self.workphone, self.secondaryphone)
 
     def __eq__(self, other):
         return (self.id is None or other.id is None or self.id == other.id) and (self.firstname == other.firstname and self.lastname == other.lastname)
