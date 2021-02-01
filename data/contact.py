@@ -1,7 +1,6 @@
 from model.add_new import Add_New
 
 
-
 testdata = [
     Add_New(firstname="firstname1", lastname='lastname1', address='address1',
             email='email1_1', email2='email2_1', email3='email3_1',

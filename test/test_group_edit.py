@@ -3,7 +3,6 @@ from model.group import Group
 from random import randrange
 
 
-
 def test_edit_group_name(app, json_groups):
     if app.group.count() == 0:
         app.group.create(Group(name="test4"))

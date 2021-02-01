@@ -3,12 +3,12 @@ from model.add_new import Add_New
 from random import randrange
 
 
-def test_cont_edit(app, data_contact):
+def test_cont_edit(app, json_contact):
     if app.contact.count() == 0:
         app.contact.create_new(Add_New(firstname="Petr", lastname="Petrov"))
     old_contact = app.contact.get_contact_list()
     index = randrange(len(old_contact))
-    cont = data_contact
+    cont = json_contact
     cont.id = old_contact[index].id
     app.contact.modify_contact_by_index(cont, index)
     assert len(old_contact) == app.contact.count()

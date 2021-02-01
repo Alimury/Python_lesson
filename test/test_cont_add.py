@@ -3,8 +3,8 @@ from model.add_new import Add_New
 
 
 
-def test_add_new(app, data_contact):
-    add_new = data_contact
+def test_add_new(app, json_contact):
+    add_new = json_contact
     old_contact = app.contact.get_contact_list()
     app.contact.create_new(add_new)
     assert len(old_contact) + 1 == app.contact.count()
