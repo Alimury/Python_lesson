@@ -42,6 +42,16 @@ class ContactHelper:
         self.return_home_page()
         self.cont_cache = None
 
+    def modify_contact_by_id(self, id, new):
+        wd = self.app.wd
+        wd.find_element_by_css_selector("a[href='edit.php?id=%s" % id).click()
+        # Изменить данные
+        self.fill_new_firms(new)
+        # Нажать на Update
+        wd.find_element_by_xpath("(//input[@name='update'])[2]").click()
+        self.return_home_page()
+        self.cont_cache = None
+
     def fill_new_firms(self, new):
         self.change_field_value("firstname", new.firstname)
         self.change_field_value("lastname", new.lastname)
@@ -74,9 +84,24 @@ class ContactHelper:
         self.return_home_page()
         self.cont_cache = None
 
+    def delete_contact_by_id(self, id):
+        wd = self.app.wd
+        # Выбрать первый контакт
+        self.select_contact_by_id(id)
+        # Удалить контакт
+        wd.find_element_by_xpath("//input[@value='Delete']").click()
+        wd.switch_to_alert().accept()
+        wd.find_elements_by_css_selector("div.msgbox")
+        self.return_home_page()
+        self.cont_cache = None
+
     def select_contact_by_index(self, index):
         wd = self.app.wd
         wd.find_elements_by_name("selected[]")[index].click()
+
+    def select_contact_by_id(self, id):
+        wd = self.app.wd
+        wd.find_element_by_css_selector("input[value='%s" % id).click()
 
     def return_home_page(self):
         wd = self.app.wd
