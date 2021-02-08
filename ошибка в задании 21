@@ -1,0 +1,37 @@
+C:\Users\Admin\PycharmProjects\Python_lesson\env\Scripts\python.exe C:/Users/Admin/PycharmProjects/Python_lesson/check_db_connection.py
+GET CONNECTION FROM THE LOCAL POOL
+Traceback (most recent call last):
+SELECT `c`.`id`, `c`.`firstname`, `c`.`lastname`, `c`.`deprecated`
+  File "C:/Users/Admin/PycharmProjects/Python_lesson/check_db_connection.py", line 17, in <module>
+FROM `addressbook` `c`
+    l = db.get_contact_list()
+WHERE `c`.`deprecated` IS NULL
+  File "<string>", line 2, in get_contact_list
+
+ROLLBACK
+RELEASE CONNECTION
+  File "C:\Users\Admin\PycharmProjects\Python_lesson\env\lib\site-packages\pony\orm\core.py", line 533, in new_func
+    result = func(*args, **kwargs)
+  File "C:\Users\Admin\PycharmProjects\Python_lesson\fixture\orm.py", line 46, in get_contact_list
+    return self.converts_contacts_to_model(select(c for c in ORMFixture.ORMContact if c.deprecated is None))
+  File "C:\Users\Admin\PycharmProjects\Python_lesson\fixture\orm.py", line 42, in converts_contacts_to_model
+    return list(map(convert, contacts))
+  File "C:\Users\Admin\PycharmProjects\Python_lesson\env\lib\site-packages\pony\orm\core.py", line 6292, in next
+    qr._items = qr._query._actual_fetch(qr._limit, qr._offset)
+  File "C:\Users\Admin\PycharmProjects\Python_lesson\env\lib\site-packages\pony\orm\core.py", line 5852, in _actual_fetch
+    used_attrs=translator.get_used_attrs())
+  File "C:\Users\Admin\PycharmProjects\Python_lesson\env\lib\site-packages\pony\orm\core.py", line 4312, in _fetch_objects
+    real_entity_subclass, pkval, avdict = entity._parse_row_(row, attr_offsets)
+  File "C:\Users\Admin\PycharmProjects\Python_lesson\env\lib\site-packages\pony\orm\core.py", line 4352, in _parse_row_
+    avdict[attr] = attr.parse_value(row, offsets, cache.dbvals_deduplication_cache)
+  File "C:\Users\Admin\PycharmProjects\Python_lesson\env\lib\site-packages\pony\orm\core.py", line 2242, in parse_value
+    dbval = attr.validate(row[offset], None, attr.entity, from_db=True)
+  File "C:\Users\Admin\PycharmProjects\Python_lesson\env\lib\site-packages\pony\orm\core.py", line 2214, in validate
+    if from_db: return converter.sql2py(val)
+  File "C:\Users\Admin\PycharmProjects\Python_lesson\env\lib\site-packages\pony\orm\dbapiprovider.py", line 771, in sql2py
+    'Value of unexpected type received from database: instead of datetime got %s' % type(val))
+  File "C:\Users\Admin\PycharmProjects\Python_lesson\env\lib\site-packages\pony\utils\utils.py", line 106, in throw
+    raise exc
+ValueError: Value of unexpected type received from database: instead of datetime got <class 'str'>
+
+Process finished with exit code 1
