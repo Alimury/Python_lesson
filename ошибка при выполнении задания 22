@@ -1,0 +1,69 @@
+C:\Users\Admin\PycharmProjects\Python_lesson\env\Scripts\python.exe C:/Users/Admin/PycharmProjects/Python_lesson/check_db_connection.py
+GET CONNECTION FROM THE LOCAL POOL
+Traceback (most recent call last):
+SELECT `g`.`group_id`, `g`.`group_name`, `g`.`group_header`, `g`.`group_footer`
+FROM `group_list` `g`
+WHERE `g`.`group_id` = %s
+['185']
+  File "C:\Users\Admin\PycharmProjects\Python_lesson\env\lib\site-packages\pymysql\converters.py", line 18, in escape_item
+
+SELECT `T1`.`id`
+FROM `address_in_groups` `T1`
+WHERE `T1`.`group_id` = %s
+[185]
+
+ROLLBACK
+RELEASE CONNECTION
+    encoder = mapping[str]
+KeyError: <class 'str'>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:/Users/Admin/PycharmProjects/Python_lesson/check_db_connection.py", line 11, in <module>
+    l = db.get_contacts_in_group(Group(id="185"))
+  File "<string>", line 2, in get_contacts_in_group
+  File "C:\Users\Admin\PycharmProjects\Python_lesson\env\lib\site-packages\pony\orm\core.py", line 533, in new_func
+    result = func(*args, **kwargs)
+  File "C:\Users\Admin\PycharmProjects\Python_lesson\fixture\orm.py", line 54, in get_contacts_in_group
+    return self.convert_contacts_to_model(orm_group.contacts)
+  File "C:\Users\Admin\PycharmProjects\Python_lesson\fixture\orm.py", line 45, in convert_contacts_to_model
+    return list(map(convert, contacts))
+  File "C:\Users\Admin\PycharmProjects\Python_lesson\env\lib\site-packages\pony\orm\core.py", line 3288, in next
+    self._iter = iter(self._wrapper.copy())
+  File "C:\Users\Admin\PycharmProjects\Python_lesson\env\lib\site-packages\pony\orm\core.py", line 3316, in copy
+    return wrapper._attr_.copy(wrapper._obj_)
+  File "C:\Users\Admin\PycharmProjects\Python_lesson\env\lib\site-packages\pony\orm\core.py", line 3036, in copy
+    if setdata is None or not setdata.is_fully_loaded: setdata = attr.load(obj)
+  File "C:\Users\Admin\PycharmProjects\Python_lesson\env\lib\site-packages\pony\orm\core.py", line 2965, in load
+    cursor = database._exec_sql(sql, arguments)
+  File "C:\Users\Admin\PycharmProjects\Python_lesson\env\lib\site-packages\pony\orm\core.py", line 954, in _exec_sql
+    connection = cache.reconnect(e)
+  File "C:\Users\Admin\PycharmProjects\Python_lesson\env\lib\site-packages\pony\orm\core.py", line 1789, in reconnect
+    if not provider.should_reconnect(exc): reraise(*sys.exc_info())
+  File "C:\Users\Admin\PycharmProjects\Python_lesson\env\lib\site-packages\pony\utils\utils.py", line 95, in reraise
+    try: raise exc.with_traceback(tb)
+  File "C:\Users\Admin\PycharmProjects\Python_lesson\env\lib\site-packages\pony\orm\core.py", line 952, in _exec_sql
+    try: new_id = provider.execute(cursor, sql, arguments, returning_id)
+  File "<string>", line 2, in execute
+  File "C:\Users\Admin\PycharmProjects\Python_lesson\env\lib\site-packages\pony\orm\dbapiprovider.py", line 52, in wrap_dbapi_exceptions
+    return func(provider, *args, **kwargs)
+  File "C:\Users\Admin\PycharmProjects\Python_lesson\env\lib\site-packages\pony\orm\dbapiprovider.py", line 279, in execute
+    else: cursor.execute(sql, arguments)
+  File "C:\Users\Admin\PycharmProjects\Python_lesson\env\lib\site-packages\pymysql\cursors.py", line 146, in execute
+    query = self.mogrify(query, args)
+  File "C:\Users\Admin\PycharmProjects\Python_lesson\env\lib\site-packages\pymysql\cursors.py", line 125, in mogrify
+    query = query % self._escape_args(args, conn)
+  File "C:\Users\Admin\PycharmProjects\Python_lesson\env\lib\site-packages\pymysql\cursors.py", line 107, in _escape_args
+    return tuple(conn.literal(arg) for arg in args)
+  File "C:\Users\Admin\PycharmProjects\Python_lesson\env\lib\site-packages\pymysql\cursors.py", line 107, in <genexpr>
+    return tuple(conn.literal(arg) for arg in args)
+  File "C:\Users\Admin\PycharmProjects\Python_lesson\env\lib\site-packages\pymysql\connections.py", line 517, in literal
+    return self.escape(obj, self.encoders)
+  File "C:\Users\Admin\PycharmProjects\Python_lesson\env\lib\site-packages\pymysql\connections.py", line 510, in escape
+    return converters.escape_item(obj, self.charset, mapping=mapping)
+  File "C:\Users\Admin\PycharmProjects\Python_lesson\env\lib\site-packages\pymysql\converters.py", line 20, in escape_item
+    raise TypeError("no default type converter defined")
+TypeError: no default type converter defined
+
+Process finished with exit code 1
