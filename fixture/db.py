@@ -29,7 +29,8 @@ class DbFixture:
             cursor.execute("select id, firstname, lastname, address, home, mobile, work, email, email2, email3, phone2 from addressbook")
             for row in cursor:
                 (id, firstname, lastname, address, home, mobile, work, email, email2, email3, phone2) = row
-                list.append(Add_New(id=str(id), firstname=firstname, lastname=lastname, address=address))
+                list.append(Add_New(id=str(id), firstname=firstname, lastname=lastname, address=address, email=email, email2=email2, email3=email3,
+                                    homephone=home, mobilephone=mobile, workphone=work, secondaryphone=phone2))
         finally:
             cursor.close()
         return list
