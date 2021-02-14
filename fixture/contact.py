@@ -108,6 +108,8 @@ class ContactHelper:
         if not (len(wd.find_elements_by_name("Number of results: ")) > 0):
             wd.find_element_by_link_text("home").click()
 
+
+
     def count(self):
         wd = self.app.wd
         self.return_home_page()
@@ -177,3 +179,41 @@ class ContactHelper:
         secondaryphone = re.search("P: (.*)", text).group(1)
         return Add_New(homephone=homephone, mobilephone=mobilephone,
                        workphone=workphone, secondaryphone=secondaryphone)
+
+
+    def add_contact_to_group(self, contact_id, group_id):
+        wd = self.app.wd
+        self.return_home_page()
+        self.visible_all_contact()
+        wd.find_element_by_css_selector("input[value='%s']" % contact_id).click()
+        self.choice_group(group_id)
+        self.return_home_page()
+        self.visible_all_contact()
+
+    def visible_all_contact(self):
+        wd = self.app.wd
+        wd.find_element_by_name("group")
+        if not wd.find_element_by_xpath("//option[@value='']"):
+            wd.find_element_by_xpath("//option[@value='']").click()
+
+    def choice_group(self, group_id):
+        wd = self.app.wd
+        wd.find_element_by_name("to_group").click()
+        wd.find_element_by_xpath("(//option[@value='%s'])[2]" % group_id).click()
+        wd.find_element_by_name("add").click()
+
+    def remove_contact_from_group(self, contact_id, group_id):
+        wd = self.app.wd
+        self.return_home_page()
+        self.open_group_page(group_id)
+        wd.find_element_by_css_selector("input[value='%s']" % contact_id).click()
+        wd.find_element_by_name("remove").click()
+        self.return_home_page()
+        self.visible_all_contact()
+
+    def open_group_page(self, group_id):
+        wd = self.app.wd
+        wd.find_element_by_name("group")
+        wd.find_element_by_xpath("//option[@value='%s']" % group_id).click()
+
+
