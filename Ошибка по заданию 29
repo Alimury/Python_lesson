@@ -1,0 +1,24 @@
+(env) C:\Users\Admin\PycharmProjects\Python_lesson>C:\selenium\allure\bin\allure.bat -v generate -o allure-report -- allure-results
+[main] DEBUG ru.yandex.qatools.allure.data.utils.ServiceLoaderUtils - Found Plugin [ru.yandex.qatools.allure.data.plugins.MigrationPlugin@3bd82cf5]
+[main] DEBUG ru.yandex.qatools.allure.data.utils.ServiceLoaderUtils - Found Plugin [ru.yandex.qatools.allure.data.plugins.XUnitPlugin@2638011]
+[main] DEBUG ru.yandex.qatools.allure.data.utils.ServiceLoaderUtils - Found Plugin [ru.yandex.qatools.allure.data.plugins.TimelinePlugin@6a03bcb1]
+[main] DEBUG ru.yandex.qatools.allure.data.utils.ServiceLoaderUtils - Found Plugin [ru.yandex.qatools.allure.data.plugins.BehaviorsPlugin@7c83dc97]
+[main] DEBUG ru.yandex.qatools.allure.data.utils.ServiceLoaderUtils - Found Plugin [ru.yandex.qatools.allure.data.plugins.DefectsPlugin@ba54932]
+[main] DEBUG ru.yandex.qatools.allure.data.utils.ServiceLoaderUtils - Found Plugin [ru.yandex.qatools.allure.data.plugins.GraphPlugin@69fb6037]
+[main] DEBUG ru.yandex.qatools.allure.data.utils.ServiceLoaderUtils - Found Plugin [ru.yandex.qatools.allure.data.plugins.EnvironmentPlugin@4da4253]
+[main] DEBUG ru.yandex.qatools.allure.data.utils.ServiceLoaderUtils - Found Plugin [ru.yandex.qatools.allure.data.plugins.TotalPlugin@26275bef]
+Exception in thread "main" ru.yandex.qatools.allure.data.ReportGenerationException: Could not find any allure results
+        at ru.yandex.qatools.allure.data.AllureReportGenerator.generate(AllureReportGenerator.java:58)
+        at ru.yandex.qatools.allure.data.AllureReportGenerator.generate(AllureReportGenerator.java:53)
+        at ru.yandex.qatools.allure.AllureMain.main(AllureMain.java:48)
+Command aborted due to exception {}.
+org.apache.commons.exec.ExecuteException: Process exited with an error: 1 (Exit value: 1)
+        at org.apache.commons.exec.DefaultExecutor.executeInternal(DefaultExecutor.java:404)
+        at org.apache.commons.exec.DefaultExecutor.execute(DefaultExecutor.java:166)
+        at org.apache.commons.exec.DefaultExecutor.execute(DefaultExecutor.java:153)
+        at ru.yandex.qatools.allure.command.ReportGenerate.runUnsafe(ReportGenerate.java:48)
+        at ru.yandex.qatools.allure.command.AbstractCommand.run(AbstractCommand.java:52)
+        at ru.yandex.qatools.allure.CommandLine.main(CommandLine.java:46)
+Delete <C:\Users\Admin\AppData\Local\Temp\allure-commandline4024429983506688976\exec4148921637944243614\generate.jar>
+Delete <C:\Users\Admin\AppData\Local\Temp\allure-commandline4024429983506688976\exec4148921637944243614>
+Delete <C:\Users\Admin\AppData\Local\Temp\allure-commandline4024429983506688976>
