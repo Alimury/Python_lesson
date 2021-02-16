@@ -1,0 +1,64 @@
+(env) C:\Users\Admin\PycharmProjects\Python_lesson>py.test --alluredir allure-results test\test_group_add.py
+INTERNALERROR> Traceback (most recent call last):
+INTERNALERROR>   File "c:\users\admin\pycharmprojects\python_lesson\env\lib\site-packages\_pytest\main.py", line 253, in wrap_session
+INTERNALERROR>     config._do_configure()
+INTERNALERROR>   File "c:\users\admin\pycharmprojects\python_lesson\env\lib\site-packages\_pytest\config\__init__.py", line 982, in _do_configure
+INTERNALERROR>     self.hook.pytest_configure.call_historic(kwargs=dict(config=self))
+INTERNALERROR>   File "c:\users\admin\pycharmprojects\python_lesson\env\lib\site-packages\pluggy\hooks.py", line 308, in call_historic
+INTERNALERROR>     res = self._hookexec(self, self.get_hookimpls(), kwargs)
+INTERNALERROR>   File "c:\users\admin\pycharmprojects\python_lesson\env\lib\site-packages\pluggy\manager.py", line 93, in _hookexec
+INTERNALERROR>     return self._inner_hookexec(hook, methods, kwargs)
+INTERNALERROR>   File "c:\users\admin\pycharmprojects\python_lesson\env\lib\site-packages\pluggy\manager.py", line 87, in <lambda>
+INTERNALERROR>     firstresult=hook.spec.opts.get("firstresult") if hook.spec else False,
+INTERNALERROR>   File "c:\users\admin\pycharmprojects\python_lesson\env\lib\site-packages\pluggy\callers.py", line 208, in _multicall
+INTERNALERROR>     return outcome.get_result()
+INTERNALERROR>   File "c:\users\admin\pycharmprojects\python_lesson\env\lib\site-packages\pluggy\callers.py", line 80, in get_result
+INTERNALERROR>     raise ex[1].with_traceback(ex[2])
+INTERNALERROR>   File "c:\users\admin\pycharmprojects\python_lesson\env\lib\site-packages\pluggy\callers.py", line 187, in _multicall
+INTERNALERROR>     res = hook_impl.function(*args)
+INTERNALERROR>   File "c:\users\admin\pycharmprojects\python_lesson\env\lib\site-packages\allure\pytest_plugin.py", line 80, in pytest_configure
+INTERNALERROR>     pytest.allure._allurelistener = testlistener
+INTERNALERROR> AttributeError: module 'pytest' has no attribute 'allure'
+Traceback (most recent call last):
+  File "c:\users\admin\appdata\local\programs\python\python36\lib\runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "c:\users\admin\appdata\local\programs\python\python36\lib\runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "C:\Users\Admin\PycharmProjects\Python_lesson\env\Scripts\py.test.exe\__main__.py", line 7, in <module>
+  File "c:\users\admin\pycharmprojects\python_lesson\env\lib\site-packages\_pytest\config\__init__.py", line 187, in console_main
+    code = main()
+  File "c:\users\admin\pycharmprojects\python_lesson\env\lib\site-packages\_pytest\config\__init__.py", line 165, in main
+    config=config
+  File "c:\users\admin\pycharmprojects\python_lesson\env\lib\site-packages\pluggy\hooks.py", line 286, in __call__
+    return self._hookexec(self, self.get_hookimpls(), kwargs)
+  File "c:\users\admin\pycharmprojects\python_lesson\env\lib\site-packages\pluggy\manager.py", line 93, in _hookexec
+    return self._inner_hookexec(hook, methods, kwargs)
+  File "c:\users\admin\pycharmprojects\python_lesson\env\lib\site-packages\pluggy\manager.py", line 87, in <lambda>
+    firstresult=hook.spec.opts.get("firstresult") if hook.spec else False,
+  File "c:\users\admin\pycharmprojects\python_lesson\env\lib\site-packages\pluggy\callers.py", line 208, in _multicall
+    return outcome.get_result()
+  File "c:\users\admin\pycharmprojects\python_lesson\env\lib\site-packages\pluggy\callers.py", line 80, in get_result
+    raise ex[1].with_traceback(ex[2])
+  File "c:\users\admin\pycharmprojects\python_lesson\env\lib\site-packages\pluggy\callers.py", line 187, in _multicall
+    res = hook_impl.function(*args)
+  File "c:\users\admin\pycharmprojects\python_lesson\env\lib\site-packages\_pytest\main.py", line 306, in pytest_cmdline_main
+    return wrap_session(config, _main)
+  File "c:\users\admin\pycharmprojects\python_lesson\env\lib\site-packages\_pytest\main.py", line 301, in wrap_session
+    config._ensure_unconfigure()
+  File "c:\users\admin\pycharmprojects\python_lesson\env\lib\site-packages\_pytest\config\__init__.py", line 987, in _ensure_unconfigure
+    self.hook.pytest_unconfigure(config=self)
+  File "c:\users\admin\pycharmprojects\python_lesson\env\lib\site-packages\pluggy\hooks.py", line 286, in __call__
+    return self._hookexec(self, self.get_hookimpls(), kwargs)
+  File "c:\users\admin\pycharmprojects\python_lesson\env\lib\site-packages\pluggy\manager.py", line 93, in _hookexec
+    return self._inner_hookexec(hook, methods, kwargs)
+  File "c:\users\admin\pycharmprojects\python_lesson\env\lib\site-packages\pluggy\manager.py", line 87, in <lambda>
+    firstresult=hook.spec.opts.get("firstresult") if hook.spec else False,
+  File "c:\users\admin\pycharmprojects\python_lesson\env\lib\site-packages\pluggy\callers.py", line 208, in _multicall
+    return outcome.get_result()
+  File "c:\users\admin\pycharmprojects\python_lesson\env\lib\site-packages\pluggy\callers.py", line 80, in get_result
+    raise ex[1].with_traceback(ex[2])
+  File "c:\users\admin\pycharmprojects\python_lesson\env\lib\site-packages\pluggy\callers.py", line 187, in _multicall
+    res = hook_impl.function(*args)
+  File "c:\users\admin\pycharmprojects\python_lesson\env\lib\site-packages\pytest_bdd\plugin.py", line 50, in pytest_unconfigure
+    CONFIG_STACK.pop()
+IndexError: pop from empty list
