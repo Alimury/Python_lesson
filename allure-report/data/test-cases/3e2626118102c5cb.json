@@ -1,0 +1,134 @@
+{
+  "uid" : "3e2626118102c5cb",
+  "name" : "test_contact1_list",
+  "fullName" : "test.test_db_matches_ui#test_contact1_list",
+  "historyId" : "dfefe6e15ae07d52bf388cfe2e09b26c",
+  "time" : {
+    "start" : 1613483375886,
+    "stop" : 1613483377832,
+    "duration" : 1946
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: assert [162:firstnam...one:None, ...] == [162:firstnam...one:None, ...]\n  At index 0 diff: 162:firstnamevz9156d8T:lastname9T1l:address98A98H6E0N5j662:None:None:None:None:None:None:None != 162:firstnamevz9156d8T:lastname9T1l:address98A98H6E0N5j662:None:None:None:None:None:None:None\n  Use -v to get the full diff",
+  "statusTrace" : "app = <fixture.application.Application object at 0x0000020B779C27B8>\ndb = <fixture.db.DbFixture object at 0x0000020B779C4C50>\n\n    def test_contact1_list(app, db):\n        ui_list = app.contact.get_contact_list()\n        def clean(contact):\n            return Add_New(id=contact.id, firstname=contact.firstname.strip(), lastname=contact.lastname.strip(),\n                           address=contact.address.strip())\n        db_list = map(clean, db.get_contact_list())\n>       assert sorted(ui_list, key=Add_New.id_or_max) == sorted(db_list, key=Add_New.id_or_max)\nE       assert [162:firstnam...one:None, ...] == [162:firstnam...one:None, ...]\nE         At index 0 diff: 162:firstnamevz9156d8T:lastname9T1l:address98A98H6E0N5j662:None:None:None:None:None:None:None != 162:firstnamevz9156d8T:lastname9T1l:address98A98H6E0N5j662:None:None:None:None:None:None:None\nE         Use -v to get the full diff\n\ntest\\test_db_matches_ui.py:20: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "app",
+    "time" : {
+      "start" : 1613483375836,
+      "stop" : 1613483375885,
+      "duration" : 49
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "stop",
+    "time" : {
+      "start" : 1613483285721,
+      "stop" : 1613483285721,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "db",
+    "time" : {
+      "start" : 1613483285721,
+      "stop" : 1613483285742,
+      "duration" : 21
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "afterStages" : [ {
+    "name" : "stop::fin",
+    "time" : {
+      "start" : 1613483403480,
+      "stop" : 1613483404902,
+      "duration" : 1422
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "db::fin",
+    "time" : {
+      "start" : 1613483403478,
+      "stop" : 1613483403479,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test"
+  }, {
+    "name" : "suite",
+    "value" : "test_db_matches_ui"
+  }, {
+    "name" : "host",
+    "value" : "Alena"
+  }, {
+    "name" : "thread",
+    "value" : "12412-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test.test_db_matches_ui"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "3e2626118102c5cb.json",
+  "parameterValues" : [ ]
+}

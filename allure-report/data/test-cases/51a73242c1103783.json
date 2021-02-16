@@ -1,0 +1,206 @@
+{
+  "uid" : "51a73242c1103783",
+  "name" : "test_cont_edit",
+  "fullName" : "test.test_cont_edit#test_cont_edit",
+  "historyId" : "a3e275117fb0156efad027058c500185",
+  "time" : {
+    "start" : 1613483371025,
+    "stop" : 1613483371031,
+    "duration" : 6
+  },
+  "status" : "broken",
+  "statusMessage" : "TypeError: not enough arguments for format string",
+  "statusTrace" : "app = <fixture.application.Application object at 0x0000020B779C27B8>\ndb = <fixture.db.DbFixture object at 0x0000020B779C4C50>, check_ui = False\n\n    def test_cont_edit(app, db, check_ui):\n        with allure.step(\"Given if the list is empty new contact\"):\n            if len(db.get_contact_list()) == 0:\n                app.contact.create_new(Add_New(firstname=\"Petr\", lastname=\"Petrov\"))\n        with allure.step(\"Given remembering a contact from bd\"):\n            old_contact = db.get_contact_list()\n            edit_contact = random.choice(old_contact)\n        with allure.step(\"Given a new data for edited contact\"):\n            new_contact_data = Add_New(firstname=\"Petr1\", lastname=\"Petrov1\")\n>       with allure.step(\"When editing a contact %s from list %s\" % edit_contact.id, new_contact_data):\nE       TypeError: not enough arguments for format string\n\ntest\\test_cont_edit.py:16: TypeError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "stop",
+    "time" : {
+      "start" : 1613483285721,
+      "stop" : 1613483285721,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "db",
+    "time" : {
+      "start" : 1613483285721,
+      "stop" : 1613483285742,
+      "duration" : 21
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "app",
+    "time" : {
+      "start" : 1613483370499,
+      "stop" : 1613483371024,
+      "duration" : 525
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "check_ui",
+    "time" : {
+      "start" : 1613483371024,
+      "stop" : 1613483371024,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "TypeError: not enough arguments for format string",
+    "statusTrace" : "app = <fixture.application.Application object at 0x0000020B779C27B8>\ndb = <fixture.db.DbFixture object at 0x0000020B779C4C50>, check_ui = False\n\n    def test_cont_edit(app, db, check_ui):\n        with allure.step(\"Given if the list is empty new contact\"):\n            if len(db.get_contact_list()) == 0:\n                app.contact.create_new(Add_New(firstname=\"Petr\", lastname=\"Petrov\"))\n        with allure.step(\"Given remembering a contact from bd\"):\n            old_contact = db.get_contact_list()\n            edit_contact = random.choice(old_contact)\n        with allure.step(\"Given a new data for edited contact\"):\n            new_contact_data = Add_New(firstname=\"Petr1\", lastname=\"Petrov1\")\n>       with allure.step(\"When editing a contact %s from list %s\" % edit_contact.id, new_contact_data):\nE       TypeError: not enough arguments for format string\n\ntest\\test_cont_edit.py:16: TypeError",
+    "steps" : [ {
+      "name" : "Given if the list is empty new contact",
+      "time" : {
+        "start" : 1613483371026,
+        "stop" : 1613483371028,
+        "duration" : 2
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "Given remembering a contact from bd",
+      "time" : {
+        "start" : 1613483371028,
+        "stop" : 1613483371030,
+        "duration" : 2
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "Given a new data for edited contact",
+      "time" : {
+        "start" : 1613483371030,
+        "stop" : 1613483371030,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 3,
+    "hasContent" : true,
+    "shouldDisplayMessage" : true,
+    "attachmentsCount" : 0
+  },
+  "afterStages" : [ {
+    "name" : "stop::fin",
+    "time" : {
+      "start" : 1613483403480,
+      "stop" : 1613483404902,
+      "duration" : 1422
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "db::fin",
+    "time" : {
+      "start" : 1613483403478,
+      "stop" : 1613483403479,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test"
+  }, {
+    "name" : "suite",
+    "value" : "test_cont_edit"
+  }, {
+    "name" : "host",
+    "value" : "Alena"
+  }, {
+    "name" : "thread",
+    "value" : "12412-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test.test_cont_edit"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "51a73242c1103783.json",
+  "parameterValues" : [ ]
+}

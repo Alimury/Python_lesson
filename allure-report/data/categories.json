@@ -1,0 +1,94 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "AttributeError: 'NoneType' object has no attribute 'group'",
+      "children" : [ {
+        "name" : "test_phones_on_contact_view_page",
+        "uid" : "6c7e72f52831cddf",
+        "parentUid" : "4275126efd978a824e4c8f2963e9923f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1613483313595,
+          "stop" : 1613483314579,
+          "duration" : 984
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "4275126efd978a824e4c8f2963e9923f"
+    }, {
+      "name" : "TypeError: not enough arguments for format string",
+      "children" : [ {
+        "name" : "test_cont_edit",
+        "uid" : "51a73242c1103783",
+        "parentUid" : "ef58d3cc6ed7d8f9ce3aee18e96cd0b8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1613483371025,
+          "stop" : 1613483371031,
+          "duration" : 6
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_edit_group_name",
+        "uid" : "efe4852206c50723",
+        "parentUid" : "ef58d3cc6ed7d8f9ce3aee18e96cd0b8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1613483403453,
+          "stop" : 1613483403465,
+          "duration" : 12
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "ef58d3cc6ed7d8f9ce3aee18e96cd0b8"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  }, {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: assert False",
+      "children" : [ {
+        "name" : "test_group_list",
+        "uid" : "60ba264989cb9ba4",
+        "parentUid" : "8d89788b03808d3beec6ddf8e7d75f3d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1613483371519,
+          "stop" : 1613483375811,
+          "duration" : 4292
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "8d89788b03808d3beec6ddf8e7d75f3d"
+    }, {
+      "name" : "AssertionError: assert [162:firstnam...one:None, ...] == [162:firstnam...one:None, ...]\n  At index 0 diff: 162:firstnamevz9156d8T:lastname9T1l:address98A98H6E0N5j662:None:None:None:None:None:None:None != 162:firstnamevz9156d8T:lastname9T1l:address98A98H6E0N5j662:None:None:None:None:None:None:None\n  Use -v to get the full diff",
+      "children" : [ {
+        "name" : "test_contact1_list",
+        "uid" : "3e2626118102c5cb",
+        "parentUid" : "e644fd9212f7b09e0263843673231499",
+        "status" : "failed",
+        "time" : {
+          "start" : 1613483375886,
+          "stop" : 1613483377832,
+          "duration" : 1946
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "e644fd9212f7b09e0263843673231499"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ]
+}

@@ -13,11 +13,11 @@ def test_del_contact_from_group(app, db, orm):
     groups = db.get_group_list()
     group = random.choice(groups)
     list_group = orm.get_contacts_in_group(Group(id=group.id))
-    if contact in list_group: #проверяем, что контакт состоит в группе
+    if contact in list_group:
         app.contact.remove_contact_from_group(contact.id, group.id)
     else:
-        app.contact.add_contact_to_group(contact.id, group.id) # если контакт не в группе, добавляем его
-        app.contact.remove_contact_from_group(contact.id, group.id) # а потом удаляем из группы
+        app.contact.add_contact_to_group(contact.id, group.id)
+        app.contact.remove_contact_from_group(contact.id, group.id)
     list = orm.get_contacts_not_in_group(Group(id=group.id))
     print(contact)
     print(list)
