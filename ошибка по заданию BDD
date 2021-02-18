@@ -1,0 +1,77 @@
+Testing started at 14:21 ...
+C:\Users\Admin\PycharmProjects\Python_lesson\env\Scripts\python.exe "C:\Program Files\JetBrains\PyCharm Community Edition 2019.2\helpers\pycharm\_jb_pytest_runner.py" --path C:/Users/Admin/PycharmProjects/Python_lesson/bdd/group_scenarios.py
+Launching pytest with arguments C:/Users/Admin/PycharmProjects/Python_lesson/bdd/group_scenarios.py in C:\Users\Admin\PycharmProjects\Python_lesson
+
+============================= test session starts =============================
+platform win32 -- Python 3.6.4, pytest-6.1.2, py-1.9.0, pluggy-0.13.1 -- C:\Users\Admin\PycharmProjects\Python_lesson\env\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\Admin\PycharmProjects\Python_lesson
+plugins: allure-pytest-2.8.33, bdd-4.0.2
+collecting ... 
+bdd/group_scenarios.py:None (bdd/group_scenarios.py)
+ImportError while importing test module 'C:\Users\Admin\PycharmProjects\Python_lesson\bdd\group_scenarios.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+env\lib\site-packages\_pytest\python.py:571: in _importtestmodule
+    mod = import_path(self.fspath, mode=importmode)
+env\lib\site-packages\_pytest\pathlib.py:517: in import_path
+    importlib.import_module(module_name)
+..\..\appdata\local\programs\python\python36\lib\importlib\__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:994: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:971: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:955: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:665: in _load_unlocked
+    ???
+env\lib\site-packages\_pytest\assertion\rewrite.py:171: in exec_module
+    exec(co, module.__dict__)
+bdd\group_scenarios.py:2: in <module>
+    from group_steps import *
+E   ModuleNotFoundError: No module named 'group_steps'
+
+Assertion failed
+
+Assertion failed
+collected 0 items / 1 error
+
+=================================== ERRORS ====================================
+___________________ ERROR collecting bdd/group_scenarios.py ___________________
+ImportError while importing test module 'C:\Users\Admin\PycharmProjects\Python_lesson\bdd\group_scenarios.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+env\lib\site-packages\_pytest\python.py:571: in _importtestmodule
+    mod = import_path(self.fspath, mode=importmode)
+env\lib\site-packages\_pytest\pathlib.py:517: in import_path
+    importlib.import_module(module_name)
+..\..\appdata\local\programs\python\python36\lib\importlib\__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:994: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:971: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:955: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:665: in _load_unlocked
+    ???
+env\lib\site-packages\_pytest\assertion\rewrite.py:171: in exec_module
+    exec(co, module.__dict__)
+bdd\group_scenarios.py:2: in <module>
+    from group_steps import *
+E   ModuleNotFoundError: No module named 'group_steps'
+=========================== short test summary info ===========================
+ERROR bdd/group_scenarios.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+============================== 1 error in 0.35s ===============================
+
+Process finished with exit code 0
+
+Assertion failed
+
+Assertion failed
+
+Assertion failed
+
+Assertion failed
