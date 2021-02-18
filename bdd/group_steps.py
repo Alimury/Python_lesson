@@ -6,7 +6,7 @@ from model.group import Group
 def group_list(db):
     return db.get_group_list()
 
-@given("a group with <name>, <header> and <footer>")
+@given('a group with <name>, <header> and <footer>', target_fixture="new_group")
 def new_group(name, header, footer):
     return Group(name=name, header=header, footer=footer)
 
