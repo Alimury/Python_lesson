@@ -1,0 +1,124 @@
+Started by user elena badina
+Running as SYSTEM
+Building in workspace C:\Users\Admin\.jenkins\workspace\test_bdd
+The recommended git tool is: NONE
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/Alimury/Python_lesson
+ > git.exe init C:\Users\Admin\.jenkins\workspace\test_bdd # timeout=10
+Fetching upstream changes from https://github.com/Alimury/Python_lesson
+ > git.exe --version # timeout=10
+ > git --version # 'git version 2.29.2.windows.2'
+ > git.exe fetch --tags --force --progress -- https://github.com/Alimury/Python_lesson +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git.exe config remote.origin.url https://github.com/Alimury/Python_lesson # timeout=10
+ > git.exe config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > git.exe rev-parse "refs/remotes/origin/main^{commit}" # timeout=10
+Checking out Revision d70b1fabaf99f329e32e0810203064a8e133b784 (refs/remotes/origin/main)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f d70b1fabaf99f329e32e0810203064a8e133b784 # timeout=10
+Commit message: "Create Ошибка по 27 заданию"
+ > git.exe rev-list --no-walk ee3e4b203cea2b7a4e120ef29176e8ef222fa122 # timeout=10
+[test_bdd] $ cmd.exe /C "C:\Users\Admin\AppData\Local\Programs\Python\Python36\python.exe C:\Users\Admin\.jenkins\shiningpanda\jobs\67d991e6\virtualenv.py C:\Users\Admin\.jenkins\shiningpanda\jobs\67d991e6\virtualenvs\d41d8cd9 && exit %%ERRORLEVEL%%"
+PYTHONHOME is set.  You *must* activate the virtualenv before using it
+Using base prefix 'C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python36'
+New python executable in C:\Users\Admin\.jenkins\shiningpanda\jobs\67d991e6\virtualenvs\d41d8cd9\Scripts\python.exe
+Installing setuptools, pip, wheel...done.
+[test_bdd] $ cmd.exe /c call C:\Users\Admin\AppData\Local\Temp\shiningpanda5677104061243467408.bat
+
+C:\Users\Admin\.jenkins\workspace\test_bdd>pip install -r requirements.txt 
+Collecting pytest
+  Using cached pytest-6.2.2-py3-none-any.whl (280 kB)
+Collecting pytest_bdd
+  Using cached pytest_bdd-4.0.2-py2.py3-none-any.whl (40 kB)
+Collecting selenium
+  Using cached selenium-3.141.0-py2.py3-none-any.whl (904 kB)
+Collecting jsonpickle
+  Using cached jsonpickle-2.0.0-py2.py3-none-any.whl (37 kB)
+Collecting pony
+  Using cached pony-0.7.14-py3-none-any.whl
+Collecting pymysql
+  Using cached PyMySQL-1.0.2-py3-none-any.whl (43 kB)
+Collecting mysql-connector-python-rf
+  Using cached mysql_connector_python_rf-2.2.2-cp36-cp36m-win_amd64.whl
+Collecting importlib-metadata
+  Using cached importlib_metadata-3.4.0-py3-none-any.whl (10 kB)
+Collecting pluggy<1.0.0a1,>=0.12
+  Using cached pluggy-0.13.1-py2.py3-none-any.whl (18 kB)
+Collecting iniconfig
+  Using cached iniconfig-1.1.1-py2.py3-none-any.whl (5.0 kB)
+Collecting packaging
+  Using cached packaging-20.9-py2.py3-none-any.whl (40 kB)
+Collecting colorama
+  Using cached colorama-0.4.4-py2.py3-none-any.whl (16 kB)
+Collecting attrs>=19.2.0
+  Using cached attrs-20.3.0-py2.py3-none-any.whl (49 kB)
+Collecting atomicwrites>=1.0
+  Using cached atomicwrites-1.4.0-py2.py3-none-any.whl (6.8 kB)
+Collecting py>=1.8.2
+  Using cached py-1.10.0-py2.py3-none-any.whl (97 kB)
+Collecting toml
+  Using cached toml-0.10.2-py2.py3-none-any.whl (16 kB)
+Collecting typing-extensions>=3.6.4
+  Using cached typing_extensions-3.7.4.3-py3-none-any.whl (22 kB)
+Collecting zipp>=0.5
+  Using cached zipp-3.4.0-py3-none-any.whl (5.2 kB)
+Collecting parse
+  Using cached parse-1.19.0-py3-none-any.whl
+Collecting parse-type
+  Using cached parse_type-0.5.2-py2.py3-none-any.whl (32 kB)
+Collecting glob2
+  Using cached glob2-0.7-py2.py3-none-any.whl
+Collecting Mako
+  Using cached Mako-1.1.4-py2.py3-none-any.whl
+Collecting six>=1.9.0
+  Using cached six-1.15.0-py2.py3-none-any.whl (10 kB)
+Collecting urllib3
+  Using cached urllib3-1.26.3-py2.py3-none-any.whl (137 kB)
+Collecting MarkupSafe>=0.9.2
+  Using cached MarkupSafe-1.1.1-cp36-cp36m-win_amd64.whl (16 kB)
+Collecting pyparsing>=2.0.2
+  Using cached pyparsing-2.4.7-py2.py3-none-any.whl (67 kB)
+Installing collected packages: zipp, typing-extensions, pyparsing, importlib-metadata, toml, six, py, pluggy, parse, packaging, MarkupSafe, iniconfig, colorama, attrs, atomicwrites, urllib3, pytest, parse-type, Mako, glob2, selenium, pytest-bdd, pymysql, pony, mysql-connector-python-rf, jsonpickle
+Successfully installed Mako-1.1.4 MarkupSafe-1.1.1 atomicwrites-1.4.0 attrs-20.3.0 colorama-0.4.4 glob2-0.7 importlib-metadata-3.4.0 iniconfig-1.1.1 jsonpickle-2.0.0 mysql-connector-python-rf-2.2.2 packaging-20.9 parse-1.19.0 parse-type-0.5.2 pluggy-0.13.1 pony-0.7.14 py-1.10.0 pymysql-1.0.2 pyparsing-2.4.7 pytest-6.2.2 pytest-bdd-4.0.2 selenium-3.141.0 six-1.15.0 toml-0.10.2 typing-extensions-3.7.4.3 urllib3-1.26.3 zipp-3.4.0
+
+C:\Users\Admin\.jenkins\workspace\test_bdd>pytest --cucumberjson=results.json --junitxml=results.xml bdd\group_scenarios.py 
+============================= test session starts =============================
+platform win32 -- Python 3.6.4, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
+rootdir: C:\Users\Admin\.jenkins\workspace\test_bdd
+plugins: bdd-4.0.2
+collected 0 items / 1 error
+
+=================================== ERRORS ====================================
+___________________ ERROR collecting bdd/group_scenarios.py ___________________
+ImportError while importing test module 'C:\Users\Admin\.jenkins\workspace\test_bdd\bdd\group_scenarios.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+..\..\shiningpanda\jobs\67d991e6\virtualenvs\d41d8cd9\lib\importlib\__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+bdd\group_scenarios.py:2: in <module>
+    from .group_steps import *
+E   ImportError: attempted relative import with no known parent package
+- generated json file: C:\Users\Admin\.jenkins\workspace\test_bdd\results.json -
+- generated xml file: C:\Users\Admin\.jenkins\workspace\test_bdd\results.xml --
+=========================== short test summary info ===========================
+ERROR bdd/group_scenarios.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+============================== 1 error in 0.42s ===============================
+
+C:\Users\Admin\.jenkins\workspace\test_bdd>exit 2 
+Build step 'Virtualenv Builder' marked build as failure
+[CucumberReport] Using Cucumber Reports version 5.5.0
+[CucumberReport] JSON report directory is ""
+[CucumberReport] Copied 1 json files from workspace "C:\Users\Admin\.jenkins\workspace\test_bdd" to reports directory "C:\Users\Admin\.jenkins\jobs\test_bdd\builds\4\cucumber-html-reports\.cache"
+[CucumberReport] Copied 0 properties files from workspace "C:\Users\Admin\.jenkins\workspace\test_bdd" to reports directory "C:\Users\Admin\.jenkins\jobs\test_bdd\builds\4\cucumber-html-reports\.cache"
+[CucumberReport] Processing 1 json files:
+[CucumberReport] C:\Users\Admin\.jenkins\jobs\test_bdd\builds\4\cucumber-html-reports\.cache\results.json
+[CucumberReport] Missing report result - report was not successfully completed
+[CucumberReport] Build status is left unchanged
+[Cucumber Tests] Parsing results.
+[Cucumber Tests] parsing results.json
+ERROR: Step ‘Publish Cucumber test result report’ failed: No cucumber scenarios appear to have been run.
+Recording test results
+[Checks API] No suitable checks publisher found.
+Finished: FAILURE
