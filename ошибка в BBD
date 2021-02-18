@@ -1,0 +1,70 @@
+Testing started at 15:16 ...
+C:\Users\Admin\PycharmProjects\Python_lesson\env\Scripts\python.exe "C:\Program Files\JetBrains\PyCharm Community Edition 2019.2\helpers\pydev\pydevd.py" --multiproc --qt-support=auto --client 127.0.0.1 --port 60410 --file "C:\Program Files\JetBrains\PyCharm Community Edition 2019.2\helpers\pycharm\_jb_pytest_runner.py" --path C:/Users/Admin/PycharmProjects/Python_lesson/bdd/group_scenarios.py
+pydev debugger: process 23164 is connecting
+
+Connected to pydev debugger (build 192.7142.79)
+Launching pytest with arguments C:/Users/Admin/PycharmProjects/Python_lesson/bdd/group_scenarios.py in C:\Users\Admin\PycharmProjects\Python_lesson
+
+============================= test session starts =============================
+platform win32 -- Python 3.6.4, pytest-6.1.2, py-1.9.0, pluggy-0.13.1 -- C:\Users\Admin\PycharmProjects\Python_lesson\env\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\Admin\PycharmProjects\Python_lesson
+plugins: allure-pytest-2.8.33, bdd-4.0.2
+collecting ... collected 2 items
+
+bdd/group_scenarios.py::test_add_new_group[name1-header1-footer1] <- env\lib\site-packages\pytest_bdd\scenario.py FAILED [ 50%]
+env\lib\site-packages\pytest_bdd\scenario.py:174 (test_add_new_group[name1-header1-footer1])
+file c:\users\admin\pycharmprojects\python_lesson\env\lib\site-packages\pytest_bdd\scenario.py, line 175
+          @pytest.mark.usefixtures(*function_args)
+          def scenario_wrapper(request):
+E       fixture 'group_list' not found
+>       available fixtures: app, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, check_ui, db, doctest_namespace, monkeypatch, new_group, orm, pytestbdd_given_a group list, pytestbdd_given_a group with <name>, <header> and <footer>, pytestbdd_given_trace, pytestbdd_then_the new group list is equal to the old list with ten added group, pytestbdd_then_trace, pytestbdd_when_I add the group the list, pytestbdd_when_trace, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, stop, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+c:\users\admin\pycharmprojects\python_lesson\env\lib\site-packages\pytest_bdd\scenario.py:175
+FAILED [100%]
+env\lib\site-packages\pytest_bdd\scenario.py:174 (test_add_new_group[name2-header2-footer2])
+file c:\users\admin\pycharmprojects\python_lesson\env\lib\site-packages\pytest_bdd\scenario.py, line 175
+          @pytest.mark.usefixtures(*function_args)
+          def scenario_wrapper(request):
+E       fixture 'group_list' not found
+>       available fixtures: app, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, check_ui, db, doctest_namespace, monkeypatch, new_group, orm, pytestbdd_given_a group list, pytestbdd_given_a group with <name>, <header> and <footer>, pytestbdd_given_trace, pytestbdd_then_the new group list is equal to the old list with ten added group, pytestbdd_then_trace, pytestbdd_when_I add the group the list, pytestbdd_when_trace, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, stop, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+c:\users\admin\pycharmprojects\python_lesson\env\lib\site-packages\pytest_bdd\scenario.py:175
+
+Assertion failed
+
+Assertion failed
+
+Assertion failed
+
+Assertion failed
+
+bdd/group_scenarios.py::test_add_new_group[name2-header2-footer2] <- env\lib\site-packages\pytest_bdd\scenario.py 
+
+================================== FAILURES ===================================
+__________________ test_add_new_group[name1-header1-footer1] __________________
+file c:\users\admin\pycharmprojects\python_lesson\env\lib\site-packages\pytest_bdd\scenario.py, line 175
+          @pytest.mark.usefixtures(*function_args)
+          def scenario_wrapper(request):
+E       fixture 'group_list' not found
+>       available fixtures: app, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, check_ui, db, doctest_namespace, monkeypatch, new_group, orm, pytestbdd_given_a group list, pytestbdd_given_a group with <name>, <header> and <footer>, pytestbdd_given_trace, pytestbdd_then_the new group list is equal to the old list with ten added group, pytestbdd_then_trace, pytestbdd_when_I add the group the list, pytestbdd_when_trace, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, stop, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+c:\users\admin\pycharmprojects\python_lesson\env\lib\site-packages\pytest_bdd\scenario.py:175
+__________________ test_add_new_group[name2-header2-footer2] __________________
+file c:\users\admin\pycharmprojects\python_lesson\env\lib\site-packages\pytest_bdd\scenario.py, line 175
+          @pytest.mark.usefixtures(*function_args)
+          def scenario_wrapper(request):
+E       fixture 'group_list' not found
+>       available fixtures: app, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, check_ui, db, doctest_namespace, monkeypatch, new_group, orm, pytestbdd_given_a group list, pytestbdd_given_a group with <name>, <header> and <footer>, pytestbdd_given_trace, pytestbdd_then_the new group list is equal to the old list with ten added group, pytestbdd_then_trace, pytestbdd_when_I add the group the list, pytestbdd_when_trace, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, stop, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+c:\users\admin\pycharmprojects\python_lesson\env\lib\site-packages\pytest_bdd\scenario.py:175
+=========================== short test summary info ===========================
+FAILED bdd/group_scenarios.py::test_add_new_group[name1-header1-footer1]
+FAILED bdd/group_scenarios.py::test_add_new_group[name2-header2-footer2]
+============================= 2 failed in 20.49s ==============================
+
+Process finished with exit code 0
