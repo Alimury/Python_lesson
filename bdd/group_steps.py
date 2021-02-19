@@ -3,7 +3,7 @@ from pytest_bdd import given, when, then
 from model.group import Group
 
 
-@given("a group list")
+@given("a group list", target_fixture="group_list")
 def group_list(db):
     return db.get_group_list()
 
