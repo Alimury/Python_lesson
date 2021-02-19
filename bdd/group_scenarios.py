@@ -6,3 +6,11 @@ from bdd.group_steps import *
 def test_add_new_group():
     pass
 
+@scenario('groups.feature', 'Delete a group')
+def test_delete_group():
+    pass
+
+@scenario('groups.feature', 'Modification a group')
+def test_edit_group():
+    pass
+
